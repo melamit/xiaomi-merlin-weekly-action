@@ -22,7 +22,7 @@ jobs:
     - name: Clone kernel source code
       run: |
         cd $GITHUB_WORKSPACE/
-        git clone https://github.com/Shas45558/oc_a13r --branch a13r --depth=1
+        git clone https://github.com/Shas45558/oc_a13r --branch a13r --depth=1 shasoc
     - name: Apply KernelSU patch for 4.14 kernels
       run: |
         git clone https://github.com/melamit/xiaomi-merlin-weekly-action.git $GITHUB_WORKSPACE/action
