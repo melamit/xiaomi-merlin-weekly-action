@@ -1,2 +1,1 @@
-# xiaomi-merlin-weekly-action
-Weekly unified action
+# Unified Action for multiple kernel branches
