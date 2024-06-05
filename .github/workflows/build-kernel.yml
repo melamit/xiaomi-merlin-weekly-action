@@ -25,7 +25,8 @@ jobs:
         git clone https://github.com/Shas45558/oc_a13r --branch a13r --depth=1
     - name: Apply KernelSU patch for 4.14 kernels
       run: |
-        git apply KernelSU.patch
+        git clone https://github.com/melamit/xiaomi-merlin-weekly-action.git $GITHUB_WORKSPACE/action
+        git apply $GITHUB_WORKSPACE/action/KernelSU.patch
     - name: Setup KernelSU
       run: |
         cd $GITHUB_WORKSPACE/shasoc
