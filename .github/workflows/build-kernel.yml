@@ -25,7 +25,7 @@ jobs:
         git clone https://github.com/Shas45558/oc_a13r --branch a13r --depth=1
     - name: Apply KernelSU patch for 4.14 kernels
       run: |
-        git apply $GITHUB_WORKSPACE/KernelSU.patch
+        git apply KernelSU.patch
     - name: Setup KernelSU
       run: |
         cd $GITHUB_WORKSPACE/shasoc
