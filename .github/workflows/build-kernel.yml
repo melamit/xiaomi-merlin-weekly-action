@@ -26,6 +26,7 @@ jobs:
     - name: Apply KernelSU patch for 4.14 kernels
       run: |
         git clone https://github.com/melamit/xiaomi-merlin-weekly-action.git $GITHUB_WORKSPACE/action
+        cd $GITHUB_WORKSPACE/shasoc
         git apply $GITHUB_WORKSPACE/action/KernelSU.patch
     - name: Setup KernelSU
       run: |
