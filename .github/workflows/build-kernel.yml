@@ -28,11 +28,11 @@ jobs:
       run: |
         git clone https://github.com/melamit/xiaomi-merlin-weekly-action.git $GITHUB_WORKSPACE/action
         cd $GITHUB_WORKSPACE/shasoc
-        git apply $GITHUB_WORKSPACE/action/KernelSU.patch
-    - name: Setup KernelSU
-      run: |
-        cd $GITHUB_WORKSPACE/shasoc
-        curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
+#       git apply $GITHUB_WORKSPACE/action/KernelSU.patch
+#   - name: Setup KernelSU
+#     run: |
+#       cd $GITHUB_WORKSPACE/shasoc
+#       curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s main
     - name: Generate kernel configuration
       run: |
         cd $GITHUB_WORKSPACE/shasoc
