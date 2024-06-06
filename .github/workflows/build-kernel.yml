@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
+    - uses: actions/checkout@v3
     - name: Environment setup
       run: |
         echo "BUILD_TIME=$(TZ=Europe/Kyiv date "+%Y%m%d%H%M")" >> $GITHUB_ENV
