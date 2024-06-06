@@ -40,7 +40,6 @@ jobs:
         export KBUILD_BUILD_HOST="Sunshine"
         export KBUILD_BUILD_USER="Melamit"
         make -j$(nproc --all) O=out ARCH=arm64 CC=clang merlin_defconfig
-        - name: Build kernel
     - name: Build kernel from sources
       run: |
         cd $GITHUB_WORKSPACE/shasoc
