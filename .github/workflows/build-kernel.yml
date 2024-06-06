@@ -73,9 +73,9 @@ jobs:
         sed -i 's/is_slot_device=0;/is_slot_device=auto;/g' AnyKernel3/anykernel.sh
         sed -i "s/kernel.string=ShasOC kernel by @shas45558 @ xda-developers/kernel.string=ShasOC build by @melamitdesign;/g" AnyKernel3/anykernel.sh
         if [ ${{ env.KERNEL }} = true ]; then
-            cp out/arch/shasoc/boot/Image.gz-dtb AnyKernel3/
+            cp shasoc/out/arch/boot/Image.gz-dtb AnyKernel3/
         elif [ ${{ env.DTBO }} = true ]; then
-            cp out/arch/arm64/boot/dtbo.img AnyKernel3/
+            cp shasoc/out/arch/arm64/boot/dtbo.img AnyKernel3/
         fi
         rm -rf AnyKernel3/.git* AnyKernel3/README.md
     
